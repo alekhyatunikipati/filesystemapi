@@ -1,0 +1,22 @@
+#%RAML 1.0
+title: filesystemapi
+version: v1
+/ping:
+  get:
+    description: reading the file
+    responses:
+      200:
+        body:
+          application/json:
+           example: !include example/ping/getfile.json
+/readfile:
+  post:
+    description: reading the file
+    body:
+      application/json:
+        example: !include example/ping/postfile.json
+    responses:
+          201:
+                body:
+                      application/json:
+                            !include example/ping/postfile.json  
